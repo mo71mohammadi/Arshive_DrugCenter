@@ -82,7 +82,7 @@ def index(request):
         National = []
         req = []
     initial_data = {
-        'PrescriptionType': 2
+        'PrescriptionType': 3
     }
     # print(request.POST)
     # noskh = PrescriptionzForm(request.POST or None)
