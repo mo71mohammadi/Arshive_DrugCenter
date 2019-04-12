@@ -1,0 +1,30 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <ul>
+        {% for mol in mol %}
+        <li>
+            {{mol.MoleculeName}}
+            {% for drug in mol.generic_set.all %}
+            <li>
+                {{drug}}
+                {% for product in drug.product_set.all %}
+                <p></p>
+                <li>
+                    {{product.BrandName}}
+                </li>
+                {% endfor %}
+            </li>
+            {% endfor %}
+        </li>
+        {% endfor %}
+
+    </ul>
+</body>
+</html>
+{% endblock %}

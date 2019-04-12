@@ -1,0 +1,16 @@
+{% if molecule %}
+    <ul>
+        {% for drug in molecule %}
+            <li><a href="{% url 'user:detail' drug.id %}"> {{ drug.MoleculeName }} </a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No DRUG</p>
+{% endif %}
+
+{% if user.is_authenticated %}
+     <li>User: {{ user.get_username }}</li>
+     <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+   {% else %}
+     <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+{% endif %}

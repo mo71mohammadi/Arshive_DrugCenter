@@ -1,0 +1,6 @@
+{% for i in noskhe %}
+    {{ i.tarikh }}
+    {% for n in i.tarikh %}
+        {{ n.eRx }}
+    {% endfor %}
+{% endfor %}

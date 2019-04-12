@@ -1,0 +1,6 @@
+<h1>{{ generic.EnGenericName }}</h1>
+<ul>
+    {% for product in generic.product_set.all %}
+        <li>{{ product.BrandName }}</li>
+    {% endfor %}
+</ul>
